@@ -1,0 +1,26 @@
+{
+  "name": "React-Bootstrap",
+  "version": "0.0.1",
+  "authors": [
+    "Ali Hammad <syedalihammadshah@gmail.com>"
+  ],
+  "description": "React jsx + bootstrap-sass builder",
+  "keywords": [
+    "React",
+    "Bootstrap-sass"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "bootstrap-sass": "twbs/bootstrap-sass#~3.1.1",
+    "jquery": "1.11.0",
+    "respond": "~1.4.2",
+    "react": "~0.10.0"
+  }
+}
