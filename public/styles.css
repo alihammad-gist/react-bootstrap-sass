@@ -4987,7 +4987,5 @@ button.close {
 @media print {
   .hidden-print {
     display: none !important; } }
-
-.timer {
-  background: red;
-  color: white; }
+.my-class {
+  background: "black"; }

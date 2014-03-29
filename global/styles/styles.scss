@@ -1,4 +1,6 @@
-@import "variables.scss";
-@import "bower_components/bootstrap-sass/vendor/assets/stylesheets/bootstrap.scss";
+@import "variables";
+@import "bower_components/bootstrap-sass/vendor/assets/stylesheets/bootstrap";
 
-// import sass for react components down here
+.my-class {
+	background: $var-test;
+}

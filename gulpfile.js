@@ -31,14 +31,12 @@ var bootstrap = {
 }
 
 var reactFiles = {
-	jsx: [],
-	styles: []
+	jsx: []
 };
 
 (function () {
 	reactComponents.forEach(function(el) {
-		reactFiles.styles.push(__dirname+'/jsx/'+el+'/'+el+'.scss');
-		reactFiles.jsx.push(__dirname+'/jsx/'+el+'/'+el+'.jsx');
+		reactFiles.jsx.push(__dirname+'/jsx/'+el+'.jsx');
 	});
 })();
 
@@ -66,7 +64,7 @@ gulp.task('jsx', function() {
 });
 
 gulp.task('sass', function () {
-	gulp.src(custom.styles.concat(reactFiles.styles))
+	gulp.src(custom.styles)
 	.pipe(sass({precision:10}))
 	.pipe(concat('styles.css'))
 	.pipe(gulp.dest(__dirname+'/public/'));
@@ -79,9 +77,6 @@ gulp.task('default', ['jsx', 'js', 'sass']);
 gulp.task('watch', ['default'], function() {
 
 	gulp.watch(__dirname+'/jsx/**/*.jsx', ['jsx', 'js']);
-	gulp.watch(__dirname+'/global/scripts/*.js', ['js']);
-	gulp.watch([
-				__dirname+'/jsx/**/*.scss',
-				__dirname+'/global/styles/*.scss'
-		     ],['sass']);
+	gulp.watch(__dirname+'/global/scripts/**/*.js', ['js']);
+	gulp.watch(__dirname+'/global/styles/**/*.scss', ['sass']);
 });
