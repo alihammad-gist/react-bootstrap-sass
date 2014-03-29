@@ -16,7 +16,27 @@ window.Timer = React.createClass({
   },
   render: function() {
     return (
-      <div>Seconds Elapsed: {this.state.secondsElapsed}</div>
+      <div className="well">Seconds Elapsed: {this.state.secondsElapsed}</div>
+    );
+  }
+});
+
+window.Navigation = React.createClass({
+
+  getInitialState: function () {
+    return {links: [{label: 'Home', 'href': 'http://localhost:9999'}]};
+  },
+
+  render: function () {
+      var links = this.state.links.map(function (link) {
+        return (
+          <li><a href={link.href}>{link.label.toLowerCase()}</a></li>
+        );
+      });
+    return (
+      <ul>
+        {links} 
+      </ul>
     );
   }
 });

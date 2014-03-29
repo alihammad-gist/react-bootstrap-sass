@@ -4988,5 +4988,6 @@ button.close {
   .hidden-print {
     display: none !important; } }
 
-.bla {
+.timer {
+  background: red;
   color: white; }
